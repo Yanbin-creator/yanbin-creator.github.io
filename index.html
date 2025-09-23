@@ -3,49 +3,220 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Yang Yanbin | Portfolio</title>
+  <title>Yang Yanbin | Human Factors · HCI · eVTOL</title>
+  <meta name="description" content="Yang Yanbin — Human Factors & HCI researcher focusing on eVTOL, VR for older adults, and accessibility."/>
+  <meta property="og:title" content="Yang Yanbin | Portfolio"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:description" content="Human Factors · HCI · eVTOL · Accessibility"/>
+  <meta property="og:image" content="avatar.jpg"/>
+  <link rel="icon" href="avatar.jpg"/>
   <style>
-    body{font:16px/1.6 system-ui, -apple-system; max-width:820px; margin:40px auto; padding:0 16px;}
-    header{display:flex;align-items:center;gap:16px}
-    img.avatar{width:72px;height:72px;border-radius:50%}
-    nav a{margin-right:12px}
-    section{margin:32px 0}
-    footer{margin-top:48px;opacity:.7}
+    /* ===== Design tokens ===== */
+    :root{
+      --bg: #ffffff;
+      --text: #111111;
+      --muted:#666;
+      --card:#f6f6f6;
+      --accent:#2563eb;
+      --border:#e5e7eb;
+      --radius: 16px;
+      --shadow: 0 6px 24px rgba(0,0,0,.06);
+      --max: 1100px;
+    }
+    html.dark{
+      --bg:#0b0b0c;
+      --text:#e9e9ea;
+      --muted:#a0a0a5;
+      --card:#151517;
+      --accent:#60a5fa;
+      --border:#232326;
+      --shadow: 0 6px 28px rgba(0,0,0,.35);
+    }
+    @media (prefers-color-scheme: dark){
+      :root{color-scheme: dark;}
+    }
+
+    /* ===== Base ===== */
+    *{box-sizing:border-box}
+    body{
+      margin:0; font:16px/1.7 system-ui,-apple-system,Segoe UI,Roboto,Arial;
+      background:var(--bg); color:var(--text);
+    }
+    a{color:var(--accent); text-decoration:none}
+    a:hover{text-decoration:underline;}
+    .container{max-width:var(--max); margin:0 auto; padding:24px 20px}
+    h1,h2,h3{line-height:1.25; margin:0 0 12px}
+    h2{margin-top:40px}
+    p{margin:8px 0 0}
+    .muted{color:var(--muted)}
+    .chip{display:inline-block;padding:4px 10px;border:1px solid var(--border);border-radius:999px;font-size:12px;margin-right:6px}
+
+    /* ===== Header ===== */
+    .topbar{
+      position:sticky; top:0; z-index:10; backdrop-filter:saturate(180%) blur(10px);
+      background: color-mix(in oklab, var(--bg) 85%, transparent);
+      border-bottom:1px solid var(--border);
+    }
+    .topbar .inner{display:flex;align-items:center;justify-content:space-between}
+    nav a{margin:0 10px; font-weight:600}
+    .btn{
+      border:1px solid var(--border); padding:8px 12px; border-radius:10px;
+      background:var(--card); color:var(--text); box-shadow:var(--shadow);
+    }
+    .btn:hover{filter:brightness(1.03); text-decoration:none}
+
+    /* ===== Hero ===== */
+    .hero{display:grid;grid-template-columns:120px 1fr;gap:18px;align-items:center;margin-top:22px}
+    .avatar{width:120px;height:120px;border-radius:50%;object-fit:cover;border:1px solid var(--border);box-shadow:var(--shadow)}
+    .kbd{font:12px; padding:2px 6px; border:1px solid var(--border); border-radius:6px; background:var(--card);}
+
+    /* ===== Sections ===== */
+    .grid{display:grid;gap:16px}
+    @media (min-width:800px){ .grid.cols-2{grid-template-columns:1fr 1fr} }
+    .card{
+      border:1px solid var(--border); border-radius:var(--radius); background:var(--card);
+      padding:16px; box-shadow:var(--shadow);
+    }
+    .card h3{margin:0 0 6px; font-size:18px}
+    .meta{font-size:14px; color:var(--muted)}
+    .list{list-style: none; padding:0; margin:0}
+    .list li{padding:14px 16px; border:1px solid var(--border); border-radius:14px; margin-bottom:12px; background:var(--card)}
+    .list li:hover{transform:translateY(-1px); transition:.2s ease; box-shadow:var(--shadow)}
+
+    /* ===== Footer ===== */
+    footer{border-top:1px solid var(--border); margin-top:40px; padding-top:16px}
+    .row{display:flex; gap:10px; flex-wrap:wrap; align-items:center}
   </style>
 </head>
 <body>
-  <header>
-    <img class="avatar" src="avatar.jpg" alt="avatar" />
-    <div>
-      <h1>Yang Yanbin</h1>
+  <!-- ===== Top bar ===== -->
+  <header class="topbar">
+    <div class="container inner">
+      <div class="row">
+        <strong>Yang Yanbin</strong>
+        <span class="chip">Human Factors · HCI · eVTOL</span>
+      </div>
       <nav>
         <a href="#about">About</a>
         <a href="#pubs">Publications</a>
         <a href="#projects">Projects</a>
-        <a href="mailto:you@example.com">Contact</a>
+        <a href="#contact">Contact</a>
+        <a class="btn" href="resume.pdf" target="_blank" rel="noopener">CV</a>
+        <button id="mode" class="btn" aria-label="Toggle dark mode">🌓</button>
       </nav>
     </div>
   </header>
 
-  <section id="about">
-    <h2>About</h2>
-    <p>短介绍：Human Factors / HCI / eVTOL / VR for older adults...</p>
-  </section>
+  <main class="container">
+    <!-- ===== Hero ===== -->
+    <section class="hero">
+      <img class="avatar" src="avatar.jpg" alt="avatar" onerror="this.style.display='none'">
+      <div>
+        <h1 style="margin-bottom:8px">Yang Yanbin</h1>
+        <p class="muted">MPhil @ HKUST(GZ) · Human Factors / HCI · Urban Air Mobility</p>
+        <p>
+          研究兴趣：<strong>eVTOL 简化操作（SVO）</strong>、人格特质与控制偏好、<strong>短时训练与经验迁移</strong>、
+          老年用户 VR 交互与认知负荷、可及性与听障儿童远程训练（Auralink）。
+        </p>
+        <p class="muted">🇨🇳 Guangzhou · <span class="kbd">Open to PhD/RA opportunities</span></p>
+      </div>
+    </section>
 
-  <section id="pubs">
-    <h2>Publications</h2>
-    <ul>
-      <li><strong>HFES 2025:</strong> Personality & eVTOL control preferences …</li>
-    </ul>
-  </section>
+    <!-- ===== About ===== -->
+    <section id="about">
+      <h2>About</h2>
+      <div class="card">
+        <p>
+          我专注于 <strong>航空人因工程</strong> 与 <strong>人机交互</strong> 的交叉研究，围绕 eVTOL 控制接口设计、
+          培训与生理负荷评估、个体差异建模开展实验与原型系统研发。当前有两条主线：
+        </p>
+        <ul>
+          <li>人格特质与 eVTOL 控制参数偏好（HFES 2025 已发表）</li>
+          <li>基于 MR 模拟器的短时训练：生理（ECG/EDA/RESP）× 绩效 × TLX</li>
+        </ul>
+      </div>
+    </section>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <ul>
-      <li>Auralink – 远程听障儿童训练平台</li>
-    </ul>
-  </section>
+    <!-- ===== Publications ===== -->
+    <section id="pubs">
+      <h2>Publications</h2>
+      <ul class="list">
+        <li>
+          <h3>Personality Traits and Preferred Control Parameters for eVTOL</h3>
+          <div class="meta">HFES 2025 · First Author · <a href="#">PDF</a> · <a href="#">BibTeX</a></div>
+          <p>基于飞行模拟实验揭示尽责性/情绪稳定性/外向性对控制参数偏好的影响；为自适应自动化与个性化培训提供证据。</p>
+        </li>
+        <li>
+          <h3>Transferability of Drone Experience to eVTOL Operations (under review)</h3>
+          <div class="meta">Mixed Reality Simulator · Physiological + TLX + Performance</div>
+          <p>比较无人机飞行员与非飞行员的训练效果差异，分析 RMSSD/SDNN、工作负荷与航迹误差的变化。</p>
+        </li>
+      </ul>
+    </section>
 
-  <footer>© 2025 Yang Yanbin</footer>
+    <!-- ===== Projects ===== -->
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="grid cols-2">
+        <article class="card">
+          <h3>Auralink — 听障儿童远程训练平台</h3>
+          <p class="meta">HCI · Accessibility · Game-based Rehab</p>
+          <p>面向人工耳蜗儿童的听辨与言语训练；包含家校协同、任务自适应与可用性指标采集。</p>
+          <p><a href="#">Demo</a> · <a href="#">Poster</a></p>
+        </article>
+
+        <article class="card">
+          <h3>eVTOL 单杆控制映射与舒适性优化</h3>
+          <p class="meta">Human-in-the-loop · MR Simulator</p>
+          <p>研究操纵杆输入与飞行器动态映射对操纵品质与学习效率的影响，提出参数调优与分群策略。</p>
+          <p><a href="#">Docs</a></p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== Contact ===== -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="card">
+        <p>欢迎学术合作 / 实习 / RA 机会沟通。</p>
+        <p>
+          📧 <a href="mailto:you@example.com">you@example.com</a>　
+          🔗 <a href="https://github.com/yanbin-creator" target="_blank" rel="noopener">GitHub</a>　
+          💼 <a href="#" target="_blank" rel="noopener">LinkedIn</a>　
+          📝 <a href="resume.pdf" target="_blank" rel="noopener">CV</a>
+        </p>
+      </div>
+    </section>
+
+    <footer>
+      <div class="row">
+        <span class="muted">© <span id="year"></span> Yang Yanbin</span>
+        <span class="muted"> · Built with GitHub Pages</span>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Smooth scroll for same-page anchors
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        const el = document.querySelector(a.getAttribute('href'));
+        if(el){ e.preventDefault(); el.scrollIntoView({behavior:'smooth', block:'start'}); }
+      });
+    });
+
+    // Dark mode toggle with persistence
+    const key = 'yy-theme';
+    const saved = localStorage.getItem(key);
+    if(saved){ document.documentElement.classList.toggle('dark', saved === 'dark'); }
+    document.getElementById('mode').onclick = ()=>{
+      const isDark = document.documentElement.classList.toggle('dark');
+      localStorage.setItem(key, isDark ? 'dark' : 'light');
+    };
+  </script>
 </body>
 </html>
+
