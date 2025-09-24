@@ -44,9 +44,14 @@
     .contact-links{display:flex;gap:20px;align-items:center;flex-wrap:wrap}
     .contact-links a{display:inline-flex;align-items:center;gap:8px}
     /* project */
-    .project {display: flex;gap:16px;align-items:flex-start;}
-    .project-img {width: 160px;height: 100px;object-fit: cover;border-radius: 12px;border: 1px solid var(--border);box-shadow: var(--shadow);}
-    .project-text {flex: 1;}
+    .project-card {display: flex;gap: 16px;align-items: flex-start;}
+    .project-img {
+  width: 140px;        /* 统一比例 */
+  height: 100px;       /* 固定高度，避免变形 */
+  object-fit: cover;   /* 保持比例裁切 */
+  border-radius: 10px;
+  flex-shrink: 0;      /* 图片不被压缩 */}
+  .project-content {flex: 1;}
   </style>
 </head>
 <body>
@@ -170,24 +175,29 @@
     <!-- Projects -->
     <section id="projects">
   <h2>Selected Projects</h2>
+  <ul class="list">
+    <li class="project">
+      <div class="project-card">
+        <img src="auralink.png" alt="Auralink preview" class="project-img">
+        <div class="project-content">
+          <h3>Auralink — Remote auditory training for children with CIs</h3>
+          <p class="muted">HCI · Accessibility · Game-based Rehab</p>
+          <p>Home-school collaboration, task adaptivity, and usability metrics.</p>
+        </div>
+      </div>
+    </li>
 
-  <div class="card project">
-    <img class="project-img" src="auralink.png" alt="Auralink project screenshot" onerror="this.remove()">
-    <div class="project-text">
-      <h3>Auralink — Remote auditory training for children with CIs</h3>
-      <p class="muted">HCI · Accessibility · Game-based Rehab</p>
-      <p>Home-school collaboration, task adaptivity, and usability metrics.</p>
-    </div>
-  </div>
-
-  <div class="card project">
-    <img class="project-img" src="evtol.png" alt="eVTOL project screenshot" onerror="this.remove()">
-    <div class="project-text">
-      <h3>eVTOL Simulator — Human Factors & Training Transfer</h3>
-      <p class="muted">Human Factors · eVTOL · VR/Simulator</p>
-      <p>Control parameter preferences, short-term training, and physiological workload evaluation.</p>
-    </div>
-  </div>
+    <li class="project">
+      <div class="project-card">
+        <img src="evtol.png" alt="eVTOL Simulator preview" class="project-img">
+        <div class="project-content">
+          <h3>eVTOL Simulator — Human Factors & Training Transfer</h3>
+          <p class="muted">Human Factors · eVTOL · VR/Simulator</p>
+          <p>Control parameter preferences, short-term training, and physiological workload evaluation.</p>
+        </div>
+      </div>
+    </li>
+  </ul>
 </section>
 
 
