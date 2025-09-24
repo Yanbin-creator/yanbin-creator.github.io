@@ -43,6 +43,10 @@
     /* contact */
     .contact-links{display:flex;gap:20px;align-items:center;flex-wrap:wrap}
     .contact-links a{display:inline-flex;align-items:center;gap:8px}
+    /* project */
+    .project {display: flex;gap:16px;align-items:flex-start;}
+    .project-img {width: 160px;height: 100px;object-fit: cover;border-radius: 12px;border: 1px solid var(--border);box-shadow: var(--shadow);}
+    .project-text {flex: 1;}
   </style>
 </head>
 <body>
@@ -50,7 +54,7 @@
   <header class="topbar">
     <div class="container inner">
       <div class="row">
-        <strong>Yanbin Yang (杨彦彬)</strong>
+        <strong>Yanbin Yang</strong>
         <span class="chip">HKUST(GZ)</span>
       </div>
       <nav class="row">
@@ -71,7 +75,7 @@
     <section class="hero">
       <img class="avatar" src="avatar.jpg" alt="avatar" onerror="this.remove()">
       <div>
-        <h1>Yanbin Yang</h1>
+        <h1>Yanbin Yang (杨彦彬)</h1>
         <p class="muted">MPhil @ HKUST(GZ) · Human Factors · Human-Computer Interaction</p>
         <p>Research interests: Human-Centered Computing, User Modeling &amp; State Estimation, Multi-modal Interaction, Accessible Computing</p>
         <p class="muted">🇨🇳 Guangzhou · <span class="chip">Open to PhD/RA opportunities</span></p>
@@ -98,11 +102,10 @@
       <h2>News</h2>
       <div class="card">
         <ul class="news-list">
-          <li>[2025/01] Our paper on constructing VR community for older adults was accepted by <strong>CHI 2025</strong>!</li>
-          <li>[2024/07] <a href="#" target="_blank">Augmented Library</a> was accepted by <strong>VINCI 2024</strong>.</li>
+          <li>[2025/07] Our paper “The Influence of Personality Traits on Users’ Preference of eVTOL Control Parameters” has been accepted by <a href="https://www.hfes.org/Events/ASPIRE-International-Annual-Meeting/About-the-2025-Meeting/About-the-2025-Meeting-" target="_blank" rel="noopener">ASPIRE 25</a>!</li>
           <li>[2023/09] Started my MPhil study in Intelligent Transportation Thrust (INTR) at HKUST(GZ)!</li>
           <li>[2023/06] Graduated from <a href="https://tjdi.tongji.edu.cn/" target="_blank" rel="noopener">the College of Design and Innovation</a> at Tongji University.</li>
-          <li>[2022/10] Received the 2021–2022 <strong>Chinese National Encouragement Scholarship</strong> from TJU.</li>
+          <li>[2023/02] Our paper “Bamboo Agents: Exploring the Potentiality of Digital Craft by Decoding and Recoding Process” has bee accepted by <a href="https://tei.acm.org/2023/" target="_blank" rel="noopener">TEI '23</a>.</li>
         </ul>
       </div>
     </section>
@@ -152,8 +155,12 @@
             <span class="muted" style="display:block">In Proceedings of the Seventeenth International Conference on Tangible, Embedded, and Embodied Interaction (TEI ’23)</span>
           </p>
           <p>
-            The project explores hybridizing digital power (computing/fabrication) and human skills (ideation/handcraft) through constructive design research in bamboo craft.
-            Methods for decoding and recoding the making process enrich artifact forms and integrate digital fabrication such as 3D printing, supported by toolkits and a digital platform.
+            As an emerging field in HCI, Digital Craft is often involved in debate on its concept that leads to distinctive practices. In this paper, the authors argue that the hybridization of 
+            digital power as computing and fabrication and human skills of ideation and hand-making sheds light on an important research direction for future inquiry of digital craft. In particular, 
+            the reported project focuses on bamboo craft making to explore the potentiality of digital craft through constructive design research methods. Through the collaborative making with 
+            craftspeople, methods of hybridizing digital power and human skills are explored by decoding and recoding the bamboo making process with inventive digital intervention, which enriches 
+            bamboo artifacts’ forms and integrates digital fabrication, such as 3D printing. Meanwhile, digital toolkits for bamboo weaving and a digital platform that can make computational design 
+            and craft more compatible are created and reported. The authors conclude with reported hybrid craft cases that the hybridization has the potential to stimulate a new generation of artisans.
           </p>
         </li>
 
@@ -162,13 +169,27 @@
 
     <!-- Projects -->
     <section id="projects">
-      <h2>Selected Projects</h2>
-      <div class="card">
-        <h3>Auralink — Remote auditory training for children with CIs</h3>
-        <p class="muted">HCI · Accessibility · Game-based Rehab</p>
-        <p>Home-school collaboration, task adaptivity, and usability metrics.</p>
-      </div>
-    </section>
+  <h2>Selected Projects</h2>
+
+  <div class="card project">
+    <img class="project-img" src="auralink.png" alt="Auralink project screenshot" onerror="this.remove()">
+    <div class="project-text">
+      <h3>Auralink — Remote auditory training for children with CIs</h3>
+      <p class="muted">HCI · Accessibility · Game-based Rehab</p>
+      <p>Home-school collaboration, task adaptivity, and usability metrics.</p>
+    </div>
+  </div>
+
+  <div class="card project">
+    <img class="project-img" src="evtol.png" alt="eVTOL project screenshot" onerror="this.remove()">
+    <div class="project-text">
+      <h3>eVTOL Simulator — Human Factors & Training Transfer</h3>
+      <p class="muted">Human Factors · eVTOL · VR/Simulator</p>
+      <p>Control parameter preferences, short-term training, and physiological workload evaluation.</p>
+    </div>
+  </div>
+</section>
+
 
     <!-- Contact -->
     <section id="contact">
