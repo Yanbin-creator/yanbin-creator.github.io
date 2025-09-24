@@ -3,20 +3,21 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title data-title-en="Yanbin Yang |  Human Factors · Human-Computer Interaction"
-        data-title-zh="杨彦彬 | 人因工程 · 人机交互">Yang Yanbin | HF · HCI</title>
-  <meta name="description" data-desc-en="Human Factors & HCI researcher focusing on eVTOL, training, and accessibility."
-        data-desc-zh="聚焦 eVTOL、人机交互与训练评估的航空人因研究。">
-  <meta property="og:title" content="Yang Yanbin">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="avatar.jpg">
-  <link rel="icon" href="avatar.jpg">
+  <title>Yanbin Yang | Human Factors · HCI</title>
+  <meta name="description" content="Yanbin Yang — Human Factors & HCI researcher focusing on eVTOL, training, and accessibility."/>
+  <meta property="og:title" content="Yanbin Yang"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:image" content="avatar.jpg"/>
+  <link rel="icon" href="avatar.jpg"/>
+  <!-- Font Awesome for contact icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     :root{--bg:#fff;--text:#111;--muted:#666;--card:#f6f6f6;--border:#e5e7eb;--accent:#2563eb;--radius:16px;--shadow:0 6px 24px rgba(0,0,0,.06);--max:1100px}
     html.dark{--bg:#0b0b0c;--text:#e9e9ea;--muted:#a0a0a5;--card:#151517;--border:#232326;--accent:#60a5fa;--shadow:0 6px 28px rgba(0,0,0,.35)}
-    *{box-sizing:border-box} body{margin:0;font:16px/1.7 system-ui,-apple-system,Segoe UI,Roboto,Arial;background:var(--bg);color:var(--text)}
-    a{color:var(--accent);text-decoration:none} a:hover{text-decoration:underline}
+    *{box-sizing:border-box}
+    body{margin:0;font:16px/1.7 system-ui,-apple-system,Segoe UI,Roboto,Arial;background:var(--bg);color:var(--text)}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
     .container{max-width:var(--max);margin:0 auto;padding:24px 20px}
     .topbar{position:sticky;top:0;z-index:10;backdrop-filter:saturate(180%) blur(10px);background:color-mix(in oklab, var(--bg) 85%, transparent);border-bottom:1px solid var(--border)}
     .topbar .inner{display:flex;align-items:center;justify-content:space-between}
@@ -27,20 +28,25 @@
     .hero{display:flex;gap:18px;align-items:center;margin-top:22px}
     .avatar{width:120px;height:120px;border-radius:50%;object-fit:cover;border:1px solid var(--border);box-shadow:var(--shadow)}
     .muted{color:var(--muted)}
-    h1,h2,h3{line-height:1.25;margin:0 0 12px} h2{margin-top:40px}
+    h1,h2,h3{line-height:1.25;margin:0 0 12px}
+    h2{margin-top:40px}
+    /* section title underline */
+    section h2{margin-bottom:12px;border-bottom:3px solid var(--accent);display:inline-block;padding-bottom:4px}
     .card{border:1px solid var(--border);border-radius:16px;background:var(--card);padding:16px;box-shadow:var(--shadow)}
-    .list{list-style:none;margin:0;padding:0} .list li{padding:14px 16px;border:1px solid var(--border);border-radius:14px;margin-bottom:12px;background:var(--card)}
+    .list{list-style:none;margin:0;padding:0}
+    .list li{padding:14px 16px;border:1px solid var(--border);border-radius:14px;margin-bottom:12px;background:var(--card)}
     footer{border-top:1px solid var(--border);margin-top:40px;padding:16px 0}
-    /* 语言容器的显隐 */
-    [data-lang-view]{display:none}
-    [data-lang-view].active{display:block}
-    /* 语言切换样式 */
-    .lang-switch button{border:1px solid var(--border);background:var(--card);padding:6px 10px;border-radius:10px}
-    .lang-switch button.active{outline:2px solid var(--accent)}
+    /* news */
+    .news-list{list-style:disc;margin:0 0 0 20px;padding:0}
+    .news-list li{margin:8px 0;color:var(--muted)}
+    .news-list li strong{color:var(--text)}
+    /* contact */
+    .contact-links{display:flex;gap:20px;align-items:center;flex-wrap:wrap}
+    .contact-links a{display:inline-flex;align-items:center;gap:8px}
   </style>
 </head>
 <body>
-  <!-- 顶部栏（语言开关在右上角） -->
+  <!-- Top bar -->
   <header class="topbar">
     <div class="container inner">
       <div class="row">
@@ -59,118 +65,104 @@
     </div>
   </header>
 
-  <!-- ========= 英文内容 ========= -->
-  <main id="app-en" data-lang-view data-lang="en" class="container">
+  <!-- Main -->
+  <main id="app" class="container">
+    <!-- Hero -->
     <section class="hero">
       <img class="avatar" src="avatar.jpg" alt="avatar" onerror="this.remove()">
       <div>
         <h1>Yanbin Yang</h1>
         <p class="muted">MPhil @ HKUST(GZ) · Human Factors · Human-Computer Interaction</p>
-        <p>Research interests: Human-Centered Computing, User Modeling & State Estimation, Multi-modal Interaction, Accessible Computing</p>
+        <p>Research interests: Human-Centered Computing, User Modeling &amp; State Estimation, Multi-modal Interaction, Accessible Computing</p>
         <p class="muted">🇨🇳 Guangzhou · <span class="chip">Open to PhD/RA opportunities</span></p>
       </div>
     </section>
 
+    <!-- About -->
     <section id="about">
       <h2>About</h2>
       <div class="card">
-        <p>I am a second-year MPhil student in Intelligent Transportation at The Hong Kong University of Science and Technology (Guangzhou), 
-          advised by <a href="https://facultyprofiles.hkust-gz.edu.cn/faculty-personal-page/HE-Dengbo/dengbohe">Prof. Dengbo He</a>, and I have 
-          also collaborated with <a href="https://facultyprofiles.hkust-gz.edu.cn/faculty-personal-page/FAN-Mingming/mingmingfan">Prof. Mingming Fan</a>. 
-          I received my bachelor’s degree in Product Design from Tongji University in 2023. 
-          My research interests include <strong>Human Factors</strong> and <strong>Human-Computer Interaction (HCI)</strong>. My previous design and engineering projects involve user state 
-          monitoring and behavior modeling, interaction design, wearable technology, and computational design.</p>
+        <p>
+          I am a second-year MPhil student in Intelligent Transportation at The Hong Kong University of Science and Technology (Guangzhou),
+          advised by <a href="https://facultyprofiles.hkust-gz.edu.cn/faculty-personal-page/HE-Dengbo/dengbohe" target="_blank" rel="noopener">Prof. Dengbo He</a>,
+          and I have also collaborated with
+          <a href="https://facultyprofiles.hkust-gz.edu.cn/faculty-personal-page/FAN-Mingming/mingmingfan" target="_blank" rel="noopener">Prof. Mingming Fan</a>.
+          I received my bachelor’s degree in Product Design from Tongji University in 2023.
+          My previous design and engineering projects involve user state monitoring and behavior modeling, interaction design, wearable technology, and computational design.
+        </p>
       </div>
     </section>
 
+    <!-- News -->
     <section id="news">
       <h2>News</h2>
       <div class="card">
-      <ul class="news-list">
-        <li>[2025/01] Our paper on constructing VR community for older adults was accepted by <strong>CHI 2025</strong>!</li>
-        <li>[2024/07] <a href="#">Augmented Library</a> was accepted by <strong>VINCI 2024</strong>.</li>
-        <li>[2023/09] Started my MPhil study in Intelligent Transportation Thrust (INTR) at HKUST(GZ)!</li>
-        <li>[2023/06] Graduated from <a href="https://tjdi.tongji.edu.cn/">the College of Design and Innovation</a> at Tonji University.</li>
-        <li>[2022/10] Received the 2021–2022 <strong>Chinese National Encouragement Scholarship</strong> from TJU.</li>
-      </ul>
+        <ul class="news-list">
+          <li>[2025/01] Our paper on constructing VR community for older adults was accepted by <strong>CHI 2025</strong>!</li>
+          <li>[2024/07] <a href="#" target="_blank">Augmented Library</a> was accepted by <strong>VINCI 2024</strong>.</li>
+          <li>[2023/09] Started my MPhil study in Intelligent Transportation Thrust (INTR) at HKUST(GZ)!</li>
+          <li>[2023/06] Graduated from <a href="https://tjdi.tongji.edu.cn/" target="_blank" rel="noopener">the College of Design and Innovation</a> at Tongji University.</li>
+          <li>[2022/10] Received the 2021–2022 <strong>Chinese National Encouragement Scholarship</strong> from TJU.</li>
+        </ul>
+      </div>
     </section>
 
-
+    <!-- Publications -->
     <section id="pubs">
       <h2>Publications</h2>
       <ul class="list">
 
         <li>
           <h3>Auralink: Enhancing Auditory-Verbal Therapy for Children with Cochlear Implants via a Game-based Auditory Training System</h3>
-          <p class="muted">
-          <strong>Yanbin Yang#</strong>, Lei Lei#, Qianjie Wei, Zhixiong Wang, Mingming Fan*. Under Review.
-          </p>
+          <p class="muted"><strong>Yanbin Yang#</strong>, Lei Lei#, Qianjie Wei, Zhixiong Wang, Mingming Fan*. Under Review.</p>
         </li>
 
         <li>
           <h3>Can the General Public Operate eVTOLs? Effects of Short-Term Pilot Training in eVTOLs with a Single-hand Joystick Controller</h3>
-          <p class="muted">
-          <strong>Yanbin Yang</strong>, Lei Lei, Haiyu Li, Dubo Huang, Dengbo He*. Under Review.
-          </p>
+          <p class="muted"><strong>Yanbin Yang</strong>, Lei Lei, Haiyu Li, Dubo Huang, Dengbo He*. Under Review.</p>
         </li>
-        
+
         <li>
           <h3>Public Acceptance of Autonomous Electric Vertical Take-off and Landing Aircraft: An Analysis Based on the Extended Technology Acceptance Model</h3>
-          <p class="muted">
-          Haiyu Li, <strong>Yanbin Yang</strong>, Dengbo He*. Under Revision.
-          </p>
+          <p class="muted">Haiyu Li, <strong>Yanbin Yang</strong>, Dengbo He*. Under Revision.</p>
         </li>
 
         <li>
           <h3>The Influence of Personality Traits on Users’ Preference of eVTOL Control Parameters</h3>
           <p class="muted">
-          <strong>Yanbin Yang</strong>, Haiyu Li, Lei Lei, Dubo Huang, Dengbo He*. 2025.
-          [<a href="https://journals.sagepub.com/doi/10.1177/10711813251358237" target="_blank" rel="noopener">Paper</a>]
-          <span class="meta" style="display:block">In Proceedings of the Human Factors and Ergonomics Society Annual Meeting</span>
+            <strong>Yanbin Yang</strong>, Haiyu Li, Lei Lei, Dubo Huang, Dengbo He*. 2025
+            [<a href="https://journals.sagepub.com/doi/10.1177/10711813251358237" target="_blank" rel="noopener">Paper</a>]
+            <span class="muted" style="display:block">In Proceedings of the Human Factors and Ergonomics Society Annual Meeting</span>
           </p>
-
-          <!-- 如果有 DOI，也可以放在这行： · <a href="https://doi.org/xxxx" target="_blank" rel="noopener">DOI</a> -->
-        
           <p>
-            The electric vertical takeoff and landing (eVTOL) is believed to be the future of transportation. Startup companies have 
-            proposed eVTOLs with simplified control systems. A typical example is the single-joystick control system, which controls 
-            the longitudinal, lateral and yaw movement of the eVTOL by a single joystick. However, little is known about what control 
-            parameters can meet the users’ needs of eVTOL dynamics. Thus, a flight simulator experiment with 46 participants was conducted 
-            on a six-degree-of-freedom (6-DOF) eVTOL flight simulator. We investigated how users’ personality traits can affect their 
-            preferred eVTOL control parameters, which were identified by an adaptive staircase procedure. Then, hierarchical clustering 
-            based on the preferred control parameters revealed two distinct user groups. Further, higher conscientiousness, emotional 
-            stability, and extraversion were associated with a higher preference for more sensitive control parameters. These findings 
-            highlight the importance of considering individual heterogeneity when designing the eVTOL control systems.
+            The electric vertical takeoff and landing (eVTOL) is believed to be the future of transportation. Startup companies have proposed eVTOLs with simplified control systems.
+            A typical example is the single-joystick control system, which controls the longitudinal, lateral and yaw movement of the eVTOL by a single joystick.
+            However, little is known about what control parameters can meet the users’ needs of eVTOL dynamics. Thus, a flight simulator experiment with 46 participants was conducted
+            on a six-degree-of-freedom (6-DOF) eVTOL flight simulator. We investigated how users’ personality traits can affect their preferred eVTOL control parameters, identified by
+            an adaptive staircase procedure. Hierarchical clustering on preferred parameters revealed two distinct user groups. Higher conscientiousness, emotional stability, and
+            extraversion were associated with a higher preference for more sensitive parameters, highlighting the need to consider individual heterogeneity when designing eVTOL control systems.
           </p>
         </li>
-        
-        
+
         <li>
           <h3>Bamboo Agents: Exploring the Potentiality of Digital Craft by Decoding and Recoding Process</h3>
           <p class="muted">
-            Peizhong Gao, Tanhao Gao, <strong>Yanbin Yang</strong>, Zhenyuan Liu*, Jianyu Shi, Jin Kevin Li. 2023.
+            Peizhong Gao, Tanhao Gao, <strong>Yanbin Yang</strong>, Zhenyuan Liu*, Jianyu Shi, Jin Kevin Li. 2023
             [<a href="https://dl.acm.org/doi/10.1145/3569009.3572746" target="_blank" rel="noopener">Paper</a>]
-            <span class="meta" style="display:block">In Proceedings of the Seventeenth International Conference on Tangible, Embedded, and Embodied Interaction (TEI ’23)</span>
+            <span class="muted" style="display:block">In Proceedings of the Seventeenth International Conference on Tangible, Embedded, and Embodied Interaction (TEI ’23)</span>
           </p>
-        
           <p>
-            As an emerging field in HCI, Digital Craft is often involved in debates on its concept that lead to distinctive practices.
-            In this paper, the authors argue that the hybridization of digital power as computing and fabrication and human skills of
-            ideation and hand-making sheds light on an important research direction for future inquiry of digital craft. In particular,
-            the reported project focuses on bamboo craft making to explore the potentiality of digital craft through constructive design
-            research methods. Through collaborative making with craftspeople, methods of hybridizing digital power and human skills are
-            explored by decoding and recoding the bamboo-making process with inventive digital intervention, which enriches bamboo
-            artifacts’ forms and integrates digital fabrication, such as 3D printing. Meanwhile, digital toolkits for bamboo weaving and
-            a digital platform that can make computational design and craft more compatible are created and reported. The authors conclude
-            with reported hybrid craft cases that the hybridization has the potential to stimulate a new generation of artisans.
+            The project explores hybridizing digital power (computing/fabrication) and human skills (ideation/handcraft) through constructive design research in bamboo craft.
+            Methods for decoding and recoding the making process enrich artifact forms and integrate digital fabrication such as 3D printing, supported by toolkits and a digital platform.
           </p>
         </li>
 
       </ul>
     </section>
 
+    <!-- Projects -->
     <section id="projects">
-      <h2>Projects</h2>
+      <h2>Selected Projects</h2>
       <div class="card">
         <h3>Auralink — Remote auditory training for children with CIs</h3>
         <p class="muted">HCI · Accessibility · Game-based Rehab</p>
@@ -178,81 +170,42 @@
       </div>
     </section>
 
-   <section id="contact">
-  <h2>Contact</h2>
-  <div class="card">
-    <p style="display: flex; gap: 20px; align-items: center; flex-wrap: wrap;">
-      <span><i class="fa-solid fa-envelope"></i> <a href="mailto:you@example.com">Email</a></span>
-      <span><i class="fa-brands fa-linkedin"></i> <a href="https://www.linkedin.com/in/your-profile" target="_blank">LinkedIn</a></span>
-      <span><i class="fa-solid fa-graduation-cap"></i> <a href="https://scholar.google.com/citations?user=XXXX" target="_blank">Google Scholar</a></span>
-      <span><i class="fa-brands fa-orcid"></i> <a href="https://orcid.org/0000-0000-0000-0000" target="_blank">ORCID</a></span>
-    </p>
-  </div>
-</section>
+    <!-- Contact -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="card">
+        <p class="contact-links">
+          <span><i class="fa-solid fa-envelope"></i> <a href="mailto:you@example.com">Email</a></span>
+          <span><i class="fa-brands fa-linkedin"></i> <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener">LinkedIn</a></span>
+          <span><i class="fa-solid fa-graduation-cap"></i> <a href="https://scholar.google.com/citations?user=XXXX" target="_blank" rel="noopener">Google Scholar</a></span>
+          <span><i class="fa-brands fa-orcid"></i> <a href="https://orcid.org/0000-0000-0000-0000" target="_blank" rel="noopener">ORCID</a></span>
+        </p>
+      </div>
+    </section>
 
-
-    <footer><span class="muted">© <span id="year-en"></span> Yang Yanbin · Built with GitHub Pages</span></footer>
+    <footer>
+      <span class="muted">© <span id="year"></span> Yang Yanbin · Built with GitHub Pages</span>
+    </footer>
   </main>
 
- 
   <script>
-    // 年份
-    document.getElementById('year-en').textContent = new Date().getFullYear();
-    document.getElementById('year-zh').textContent = new Date().getFullYear();
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
 
-    // 暗色模式
+    // Dark mode toggle with persistence
     const themeKey = 'yy-theme';
     const savedTheme = localStorage.getItem(themeKey);
-    if(savedTheme) document.documentElement.classList.toggle('dark', savedTheme==='dark');
-    document.getElementById('mode').onclick = ()=>{
+    if (savedTheme) document.documentElement.classList.toggle('dark', savedTheme === 'dark');
+    document.getElementById('mode').onclick = () => {
       const isDark = document.documentElement.classList.toggle('dark');
       localStorage.setItem(themeKey, isDark ? 'dark' : 'light');
     };
 
-    // 语言切换
-    const langKey = 'yy-lang';
-    const langBtnEn = document.getElementById('lang-en');
-    const langBtnZh = document.getElementById('lang-zh');
-
-    function applyLang(lang){
-      // 显示对应容器
-      document.querySelectorAll('[data-lang-view]').forEach(el=>{
-        el.classList.toggle('active', el.dataset.lang === lang);
-      });
-      // 顶部按钮高亮
-      langBtnEn.classList.toggle('active', lang==='en');
-      langBtnZh.classList.toggle('active', lang==='zh');
-      // 设置 html lang
-      document.documentElement.setAttribute('lang', lang === 'zh' ? 'zh' : 'en');
-      // 同步标题/描述
-      const titleEl = document.querySelector('title');
-      const descEl = document.querySelector('meta[name="description"]');
-      if(lang==='zh'){
-        titleEl.textContent = titleEl.getAttribute('data-title-zh');
-        if(descEl) descEl.setAttribute('content', descEl.getAttribute('data-desc-zh')||'');
-      }else{
-        titleEl.textContent = titleEl.getAttribute('data-title-en');
-        if(descEl) descEl.setAttribute('content', descEl.getAttribute('data-desc-en')||'');
-      }
-      // 记忆
-      localStorage.setItem(langKey, lang);
-    }
-
-    // 默认语言：优先 localStorage，否则英文
-    const initialLang = localStorage.getItem(langKey) || 'en';
-    applyLang(initialLang);
-
-    // 绑定按钮
-    langBtnEn.addEventListener('click', ()=>applyLang('en'));
-    langBtnZh.addEventListener('click', ()=>applyLang('zh'));
-
-    // 页面内锚点的平滑滚动（两语言容器都适配）
-    document.querySelectorAll('a[href^="#"]').forEach(a=>{
-      a.addEventListener('click', e=>{
-        const id = a.getAttribute('href');
-        const activeRoot = document.querySelector('[data-lang-view].active');
-        const target = activeRoot ? activeRoot.querySelector(id) : null;
-        if(target){ e.preventDefault(); target.scrollIntoView({behavior:'smooth', block:'start'}); }
+    // Smooth scroll within the page
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
       });
     });
   </script>
